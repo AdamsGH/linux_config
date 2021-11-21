@@ -22,7 +22,7 @@ printf "\n•Введите пароль суперпользователя: \n"
 passwd
 
 # Загрузчик
-pacman -S grub efibootmgr mtools
+pacman -S --noconfirm grub efibootmgr mtools
 mkdir /boot/efi
 mount /dev/sda1 /boot/efi
 grub-install --target=x86_64-efi --bootloader-id=grub_uefi
