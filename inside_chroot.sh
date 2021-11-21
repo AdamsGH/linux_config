@@ -26,6 +26,6 @@ passwd
 # Загрузчик
 pacman -S grub efibootmgr mtools
 mkdir /boot/efi
-mount $map_boot /boot/efi
+mount /dev/sda1 /boot/efi
 grub-install --target=x86_64-efi --bootloader-id=grub_uefi
 grub-mkconfig -o /boot/grub/grub.cfg
