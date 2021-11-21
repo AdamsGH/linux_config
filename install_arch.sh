@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Функция для выбора путей монтирования 
 function select_option {
 
     # little helpers for terminal print control and key input
@@ -134,5 +135,8 @@ genfstab -U /mnt >> /mnt/etc/fstab
 cp /etc/systemd/network/20-ethernet.network /mnt/etc/systemd/network/20-ethernet.network
 echo "nameserver 8.8.8.8" >> /mnt/etc/resolv.conf
 
+curl curl --remote-name https://raw.githubusercontent.com/AdamsGH/linux_config/main/inside_chroot.sh --output /mnt/root/inside.sh
+chmod u+x /mnt/root/inside.sh
+
 # Подключаемся в образ системы
-arch-chroot /mnt
+arch-chroot /mnt /root/inside.sh
