@@ -72,5 +72,9 @@ pacstrap /mnt base linux linux-firmware sudo micro nano openssh
 # Создание fstab'а
 genfstab -U /mnt >> /mnt/etc/fstab
 
+# Network
+cp /etc/systemd/network/20-ethernet.network /mnt/etc/systemd/network/20-ethernet.network
+echo "nameserver 8.8.8.8" >> /mnt/etc/resolv.conf
+
 # Подключаемся в образ системы
 arch-chroot /mnt

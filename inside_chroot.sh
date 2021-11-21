@@ -13,11 +13,9 @@ export LANG=en_US.UTF-8
 printf "\n•Введите имя ПК: \n"
 read pc_hostname
 echo $pc_hostname > /etc/hostname
-echo "127.0.0.1 localhost" > /etc/hosts
-echo "::1 localhost" > /etc/hosts
-echo "127.0.1.1 "$pc_hostname > /etc/hosts
-cp /etc/systemd/network/20-ethernet.network /mnt/etc/systemd/network/20-ethernet.network
-echo "nameserver 8.8.8.8" > /etc/resolv.conf
+echo "127.0.0.1 localhost" >> /etc/hosts
+echo "::1 localhost" >> /etc/hosts
+echo "127.0.1.1 "$pc_hostname >> /etc/hosts
 
 # Пароль рута
 printf "\n•Введите пароль суперпользователя: \n"
