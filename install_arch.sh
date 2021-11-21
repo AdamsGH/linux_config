@@ -136,7 +136,7 @@ cp /etc/systemd/network/20-ethernet.network /mnt/etc/systemd/network/20-ethernet
 echo "nameserver 8.8.8.8" >> /mnt/etc/resolv.conf
 
 curl https://raw.githubusercontent.com/AdamsGH/linux_config/main/inside_chroot.sh --output /mnt/inside.sh
-chmod u+x /mnt/root/inside.sh
+chmod u+x /mnt/inside.sh
 
 # Подключаемся в образ системы
-arch-chroot /mnt /root/inside.sh
+arch-chroot /mnt /inside.sh
