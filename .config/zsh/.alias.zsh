@@ -15,6 +15,7 @@ alias pci='sudo pacman -S --noconfirm'
 alias mc='micro'
 alias lzd='sudo lazydocker'
 alias backup_vw='sudo sqlite3 /root/docker/vw-data/db.sqlite3 ".backup '/home/adams/backup/db-$(date '+%Y%m%d-%H%M').sqlite3'"'
+alias speedtest='curl -sL yabs.sh | bash -s -- -fg'
 
 # Transmission
 tr_download='transmission-cli --download-dir'
