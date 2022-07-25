@@ -6,7 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$ZDOTDIR/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
 bindkey -e
-zstyle :compinstall filename '$XDG_CONFIG_HOME/.zshrc'
+zstyle :compinstall filename '$ZDOTDIR/.zshrc'
 autoload -Uz compinit
 compinit
 
