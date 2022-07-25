@@ -11,3 +11,6 @@ echo "alias cat='batcat'" >> $shell_conf/.config/.alias
 curl https://raw.githubusercontent.com/AdamsGH/linux_config/main/.config/zsh/.p10k.zsh > $shell_conf/.config/.p10k.zsh
 chsh --shell /bin/zsh $USER
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $shell_conf/.config/powerlevel10k
+git clone https://github.com/zsh-users/zsh-autosuggestions $shell_conf/.config/zsh-autosuggestions
+
+chmod -R 755 $shell_conf
