@@ -1,0 +1,29 @@
+alias ls='lsd'
+alias l='ls -l'
+alias la='ls -a'
+alias lla='ls -la'
+alias lt='ls --tree'
+
+alias cat='bat'
+alias du='dust'
+alias df='duf'
+alias ps='procss'
+alias dig='dog'
+
+alias pc='sudo pacman'
+alias pci='sudo pacman -S --noconfirm'
+alias mc='micro'
+alias lzd='sudo lazydocker'
+#alias backup_vw='sudo sqlite3 /root/docker/vw-data/db.sqlite3 ".backup '/home/adams/backup/db-$(date '+%Y%m%d-%H%M').sqlite3'"'
+alias cloud_sync='docker exec -it --user www-data nextcloud-server sh -c "/var/www/html/occ files:scan --all"'
+alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias rescan-mirrors="sudo reflector -f 10 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
+
+alias record='asciinema'
+alias record-gif='agg --font-dir /usr/share/fonts/TTF --font-family "JetBrainsMono Nerd Font Mono" --speed 2.5'
+
+alias zsh-reload='source ~/.config/zsh/.zshrc'
+
+# Transmission
+alias tr_download='transmission-cli --download-dir'
+alias tr_conf='/var/lib/transmission/.config/transmission-daemon/settings.json'
